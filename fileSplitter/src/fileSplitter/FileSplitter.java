@@ -13,7 +13,9 @@ public class FileSplitter
 	public static void main(String[] args){
         
 		File file=new File("C:\\Users\\ajits\\OneDrive\\Desktop\\work\\cert_chain.pem");
-		splitFile(file);
+		if(file!=null && file.exists() == true) {
+			splitFile(file);
+		}
 	}
 
 	private static void splitFile(File file) {
